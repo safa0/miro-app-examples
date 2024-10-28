@@ -80,3 +80,13 @@ button:active {
   margin-bottom: 20px;
   gap: 10px; /* Added gap for spacing between inputs and buttons */
 }
+#createPair,
+#updateBenefits,
+assignRandomTagsToSelection,
+createMatrix,
+#removeAllTags,
+#printAppData,
+copyToClipboard,
+#debugButton {
+  display: none;
+}

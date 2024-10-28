@@ -860,22 +860,7 @@ document.getElementById("printAppData").addEventListener("click", async () => {
 document
   .getElementById("copyToClipboard")
   .addEventListener("click", async () => {
-    // Notify user that app data has been copied to clipboard
-    const timestamp = new Date().toISOString();
-    await navigator.clipboard.writeText(timestamp);
-    await board.notifications.showInfo("App data copied to clipboard.");
-
-    const stickyNoteContent = JSON.stringify(g_matrix, null, 2);
-
-    const stickyNote = await board.createStickyNote({
-      content: stickyNoteContent,
-      x: 100,
-      y: 100,
-      width: 600,
-    });
-    await board.viewport.zoomToObject(stickyNote);
-
-    console.log("Created new sticky note with matrix content:", stickyNote);
+    generateTableFromTags();
   });
 
 document.getElementById("debugButton").addEventListener("click", () => {
